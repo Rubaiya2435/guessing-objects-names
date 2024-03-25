@@ -1,0 +1,18 @@
+//#! /usr/bin/env node
+
+import inquirer from "inquirer";
+
+const objectName = "Apple";
+const answer = await inquirer.prompt([
+   { 
+     name: "guessedObjectName",
+     type: "string",
+     message: "Please, guess a object name. Hint: it takes a day and keeps a doctor away."
+   }
+])
+if (answer.guessedObjectName === objectName){
+    console.log("Congatulations! You guess the right answer.");
+}
+else{
+    console.log("Sorry! Try again later. Keep trying.");
+}
